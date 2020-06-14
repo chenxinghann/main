@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        .clear:after{
+            content:" ";
+            display: block;
+            clear: both;
+            height: 0;
+        }
+        ul,li,ol{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        body{
+            background: url(img/back.png) no-repeat top left;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+        }
+        .header{
+            height: 27px;
+            background-color: black;
+            color: white;
+            font-size: 14px;
+        }
+        .header img{
+            margin-left:964px;
+        }
+        .sign{
+            padding-left: 45px;
+        }
+        .navbar-inverse {
+            background-color: white;
+            border-color: white;
+        }
+        .navbar-nav li{
+            margin-right: 70px;
+        }
+        .navbar-inverse .navbar-nav>li>a {
+            font-size: 20px;
+            color: black;
+        }
+        .navbar-inverse .navbar-nav>li>a:hover{
+            color: rgb(203, 84, 5);
+            border-bottom: 2px solid rgb(203, 84, 5);
+        }
+        .speed{
+            width: 165px;
+            height: 56px;
+            font-size: 28px;
+            background-color: rgb(203, 84, 5);
+            color: white;
+            border-radius: 5px;
+            border: 0px;
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+        .head-wrap{
+            width: 100%;
+            height: 452px;
+            background-image: url(img/banner.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .p1{
+            height: 58px;
+            width: 574px;
+            font-size: 48px;
+            color: white;
+            font-weight: lighter;
+            margin-left: 184px;
+            padding-top: 80px;
+        }
+        .p2{
+            width: 320px;
+            height: 43px;
+            color: white;
+            font-size: 20px;
+            position: relative;
+            left: 184px;
+            top: 115px;
+            padding-top: 10px;
+            border-top: 1px solid rgb(101,101,101);
+        }
+        .p3{
+            width: 384px;
+            height: 43px;
+            color: white;
+            font-size: 20px;
+            position: relative;
+            left: 184px;
+            top: 120px;
+            border-bottom: 1px solid rgb(101,101,101);
+        }
+        .search{
+            width: 598px;
+            height: 61px;
+            position: relative;
+            left: 418px;
+            top: 160px;
+            border: 4px solid rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        
+        .position{
+            width: 151px;
+            height: 53px;
+            position: relative;
+            right: 0px;
+            border-right-color: white;
+            background-color: rgb(211, 211, 216);
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .position span{
+            position: relative;
+            top: 10px;
+            left: 10px;
+            font-size: 18px;
+            color: rgb(102, 102, 102);
+        }
+        .position img{
+            padding-left: 27px;
+            padding-top: 15px;
+        }
+        .inp{
+            width: 312px;
+            height: 53px;
+            position: relative;
+            left: 151px;
+            bottom: 53px;
+            font-size: 18px;
+            color: rgb(102, 102, 102);
+        }
+        .inp1{
+            width: 312px;
+            height: 53px;
+            padding: 0px;
+            border: 0px;
+        }
+        .srh{
+            width: 133px;
+            height: 53px;
+            position: absolute;
+            left: 457px;
+            top: 0px;
+            background-color: rgb(203, 84, 5);
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .srh img{
+            padding-left: 54px;
+            padding-top: 10px;
+        }
+        .car-sent{
+            width: 1203px;
+            height: 366px;
+            margin-left: 115px;
+            margin-top: 260px;
+        }
+        .pic{
+            width: 938px;
+            height: 363px;
+            background: url(img/Sbanner2.jpg) no-repeat;
+        }
+        .pic div:nth-of-type(1){
+            width: 310px;
+            height: 44px;
+            font-size: 36px;
+            color: white;
+            position: relative;
+            left: 542px;
+            top: 33px;
+        }
+        .pic div:nth-of-type(2){
+            width: 220px;
+            height: 22px;
+            font-size: 18px;
+            color: white;
+            position: relative;
+            left: 548px;
+            top: 54px;
+        }
+        .pic div:nth-of-type(3){
+            width: 326px;
+            height: 22px;
+            font-size: 18px;
+            color: white;
+            position: relative;
+            left: 548px;
+            top: 60px;
+        }
+        .car{
+            width: 267px;
+            height: 363px;
+            background-color: rgb(20, 49, 109);
+            position: absolute;
+            top: 626px;
+            margin-left: 935px;
+        }
+        .car img{
+            padding-top: 82px;
+            padding-left: 90px;
+        }
+        .car span{
+            position: absolute;
+            top: 185px;
+            right: 76px;
+            color: white;
+            font-size: 26px;
+        }
+        .car input{
+            margin-top: 96px;
+            margin-left: 52px;
+            width: 194px;
+            height: 60px;
+            background-color: rgb(20, 49, 109);
+            color: white;
+            font-size: 24px;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+        .tittle1{
+            width: 1203px;
+            margin-left: 115px;
+            margin-top: 459px;
+            margin-bottom: 20px;
+        }
+        .tittle11{
+            width: 1203;
+            margin-top: 280px;
+            margin-left: 15px;
+            margin-bottom: 20px;
+        }
+        .tittle11 span{
+            display: block;
+            font-size: 30px;
+            color: black;
+            border-left: 2px solid rgb(203, 84, 5);
+        }
+        .tittle1 p:nth-of-type(1){
+            font-size: 36px;
+            text-align: center;
+        }
+        .tittle1 p:nth-of-type(2){
+            font-size: 18px;
+            text-align: center;
+        }
+        .tittle2{
+            width: 1203px;
+            margin-top: 46px;
+            margin-bottom: 20px;
+            margin-left: 115px;
+        }
+        .tittle22{
+            width: 1203px;
+            margin-top: 0px;
+            margin-left: 15px;
+        }
+        .tittle22 span:nth-of-type(1){
+            display: block;
+            font-size: 30px;
+            color: black;
+            border-left: 2px solid rgb(203, 84, 5);
+        }
+        .tittle22 span:nth-of-type(2){
+            display: block;
+            position: relative;
+            left: 160px;
+            bottom: 35px;
+            font-size: 20px;
+        }
+        .tittle2 p:nth-of-type(1){
+            font-size: 36px;
+            text-align: center;
+        }
+        .tittle2 p:nth-of-type(2){
+            font-size: 18px;
+            text-align: center;
+        }
+        .design{
+            width: 1203px;
+            height: 400px;
+            background: rgb(20, 49, 109);
+            margin-top: 10px;
+            margin-left: 115px;
+        }
+        .design ul{
+            padding-top: 42px;
+        }
+        .design ul li{
+            display: inline-block;
+            width: 282px;
+            height: 345px;
+            margin-left: 55px;
+        }
+        .spic{
+            position: relative;
+        }
+        .f1{
+            display: block;
+            position: relative;
+            font-size: 20px;
+            color: white;
+            left: 55px;
+            bottom: 70px;
+        }
+        .f2{
+            display: block;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            position: relative;
+            right: 40px;
+            top: 20px;
+        }
+        .btm1{
+            height: 369px;
+            background: black;
+            border-bottom: 2px solid rgb(101,101,101);
+        }
+        .first{
+            height: 155px;
+        }
+        .first ul{
+            padding-top: 44px;
+            padding-left: 115px;
+        }
+        .first li{
+            display: inline-block;
+            width: 116px;
+            height: 80px;
+            margin-right: 17px;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+        }
+        .first span{
+            position: relative;
+            top: 10px;
+        }
+        .second span{
+            display: block;
+            font-size: 14px;
+            position: relative;
+            padding-left: 115px;
+            color: white;
+        }
+        .third span{
+            display: block;
+            font-size: 14px;
+            position: relative;
+            padding-left: 115px;
+            color: white;
+        }
+        .fourth span{
+            display: block;
+            font-size: 14px;
+            position: relative;
+            padding-left: 115px;
+            color: white;
+        }
+        .btm2{
+            height: 158px;
+            background: black;
+            border-bottom: 4px solid white;
+        }
+        .btm2 span{
+            display: block;
+            width: 335px;
+            color: white;
+            font-size: 16px;
+            position: relative;
+            left: 554px;
+            top: 41px;
+        }
+        .cs{
+            width: 100%;
+            height: 198px;
+            bottom: 300px;
+            position: relative;
+            background-color: white;
+        }
+        .cs img{
+            margin-top: 45px;
+            margin-left: 42px;
+        }
+        .cs span{
+            display: block;
+            position: relative;
+            left: 160px;
+            bottom: 100px;
+        }
+        .cs span:nth-of-type(1){
+            margin-bottom: 25px;
+            color: rgb(20, 49, 109);
+            font-size: 30px;
+        }
+        .cs span:nth-of-type(2),.cs span:nth-of-type(3){
+            font-size: 18px;
+            color: rgb(101,101,101);
+        }
+        .cs input{
+            position: relative;
+            left: 400px;
+            bottom: 180px;
+            width: 94px;
+            height: 51px;
+            background-color: white;
+            border: 1px solid rgb(101,101,101);
+            border-radius: 5px;
+            font-size: 18px;
+            color: rgb(101,101,101);
+        }
+        .design1{
+            width: 100%;
+        }
+        .design1 p{
+            font-size: 30px;
+            text-align: center;
+            padding-right: 0px;
+        }
+        .design1 ul{
+            padding-left: 0px;
+            padding-top: 40px;
+        }
+        .design1 li{
+            display: block;
+            border-bottom: 1px solid rgb(232,232,232);
+        }
+        .design1 img{
+            margin-left: 57px;
+            margin-top: 10px;
+        }
+        .design1 span{
+            display: block;
+            position: relative;
+            left: 140px;
+            bottom: 54px;
+            font-size: 22px;
+        }
+        .p11{
+                visibility: visible;
+                height: 58px;
+                width: 450px;
+                font-size: 35px;
+                color: white;
+                font-weight: lighter;
+                margin-left: 84px;
+                padding-top: 80px;
+            }
+        .p22{
+            visibility: visible;
+            width: 320px;
+            height: 43px;
+            color: white;
+            font-size: 20px;
+            position: relative;
+            left: 84px;
+            top: 80px;
+            padding-top: 10px;
+            border: 0px;
+        }
+        @media screen and (max-width: 720px) {
+            .header{
+                visibility: hidden;
+                width: 0px;
+                height: 0px;
+            }
+        }
+        @media screen and (max-width: 720px){
+            .search{
+                width: 398px;
+                height: 49px;
+                position: relative;
+                top: 120px;
+                left: 80px;
+                border: 4px solid rgba(0, 0, 0, 0.5);
+                border-radius: 10px;
+            }
+            .position{
+                width: 100px;
+                height: 41px;
+                position: relative;
+                right: 0px;
+                border-right-color: white;
+                background-color: rgb(211, 211, 216);
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+            .position span{
+                position: relative;
+                top: 5px;
+                left: 10px;
+                font-size: 16px;
+                color: rgb(102, 102, 102);
+            }
+            .position img{
+                padding-left: 10px;
+                padding-top: 10px;
+            }
+            .inp{
+                width: 200px;
+                height: 41px;
+                position: relative;
+                left: 100px;
+                bottom: 53px;
+                font-size: 12px;
+                color: rgb(102, 102, 102);
+            }
+            .inp1{
+                width: 200px;
+                height: 41px;
+                margin-top: 12px;
+                padding: 0px;
+                border: 0px;
+            }
+            .srh{
+                width: 91px;
+                height: 41px;
+                position: absolute;
+                left: 300px;
+                top: 0px;
+                background-color: rgb(203, 84, 5);
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+            .srh img{
+                padding-left: 34px;
+                padding-top: 6px;
+            }
+
+        }
+        @media screen and (max-width: 720px){
+            .cs{
+                visibility: visible;
+                bottom: 100px;
+            }
+            .car-sent{
+                visibility: hidden;
+                width: 0px;
+                height: 0px;
+            }
+        }
+        @media screen and (min-width: 720px){
+            .car-sent{
+                visibility: visible;
+            }
+            .cs{
+                visibility: hidden;
+                width: 0px;
+                height: 0px;
+            }
+        }
+        @media screen and (max-width: 720px){
+            .tittle11{
+                visibility: visible;
+                margin-top: 100px;
+            }
+            .tittle1{
+                visibility: hidden;
+                margin-top: 0px;
+            }
+        }
+        @media screen and (min-width: 720px){
+            .tittle1{
+                visibility: visible;
+            }
+            .tittle11{
+                visibility: hidden;
+                margin-top: 0px;
+                height: 0px;
+                margin-bottom: 0px;
+            }
+        }
+        @media screen and (max-width: 720px){
+            .speed{
+                visibility: visible;
+            }
+        }
+        @media screen and (min-width: 720px){
+            .speed{
+                visibility: hidden;
+                height: 0px;
+                width: 0px;
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+        }
+        @media screen and (max-width: 720px) {
+            #hot{
+                visibility: hidden;
+                height: 0px;
+            }
+            .more{
+                visibility: visible;
+                width: 228px;
+                height: 55px;
+                font-size: 28px;
+                color: rgb(101,101,101);
+                background-color: white;
+                border: 1px solid rgb(101,101,101);
+                border-radius: 5px;
+                margin-top: 30px;
+                margin-left: 180px;
+            }
+        }
+        @media screen and (min-width: 720px){
+            .more{
+                visibility: hidden;
+                width: 0px;
+                height: 0px;
+            }
+        }
+        @media screen and (max-width: 720px){
+            .tittle22{
+                visibility: visible;
+                margin-top: 30px;
+            }
+            .tittle2{
+                visibility: hidden;
+                margin-top: 0px;
+                height: 0px;
+                margin-bottom: 0px;
+            }
+        }
+        @media screen and (min-width: 720px){
+            .tittle2{
+                visibility: visible;
+            }
+            .tittle22{
+                visibility: hidden;
+                margin-top: 0px;
+                height: 0px;
+                margin-bottom: 0px;
+            }
+        }
+        @media screen and (min-width: 720px) {
+            #intro{
+                height: 350px;
+                background:rgb(20, 49, 109);
+            }
+            #sp1{
+                display: block;
+                color: white;
+                font-size: 26px;
+                padding-top: 89px;
+                text-align: center;
+            }
+            #sp2{
+                display: block;
+                height: 130px;
+                color: white;
+                font-size: 20px;
+                padding-top: 36px;
+                padding-right: 40px;
+                padding-left: 40px;
+                text-align: justify;
+            }
+        }
+        @media screen and (max-width: 720px){
+            #intro{
+                height: 350px;
+                background:white;
+            }
+            #sp1{
+                display: block;
+                color: black;
+                font-size: 26px;
+                padding-top: 89px;
+                text-align: center;
+            }
+            #sp2{
+                display: block;
+                height: 130px;
+                color: black;
+                font-size: 20px;
+                padding-top: 36px;
+                padding-right: 40px;
+                padding-left: 40px;
+                text-align: justify;
+            }
+        }  
+        @media screen and (max-width: 720px){
+            .design1{
+                visibility: visible;
+            }
+            .design1 ul{
+                padding-left: 0px;
+            }
+            
+            .design{
+                visibility: hidden;
+                height: 0px;
+            }
+        }
+        @media screen and (min-width: 720px){
+            .design{
+                visibility: visible;
+            }
+            .design1{
+                visibility: hidden;
+                height: 0px;
+                width: 0px;
+            }
+        }
+        @media screen and (max-width: 720px){
+            .btm1{
+                visibility: hidden;
+                height: 0px;
+            }
+            .btm2{
+                visibility: hidden;
+                height: 0px;
+            }
+            .btm3{
+                visibility: visible;
+                width: 100%;
+                height: 333px;
+                background-color: black;
+            }
+            .btm3 span{
+                /* text-align: center; */
+                font-size: 22px;
+                color: white;
+                position: relative;
+                left: 80px;
+                top: 105px;
+            }
+            .btm3 span:nth-of-type(1),.btm3 span:nth-of-type(3){
+                left: 182px;
+            }
+        }
+        @media screen and (min-width: 720px){
+            .btm3{
+                visibility: hidden;
+                height: 0px;
+            }
+            .btm1{
+                visibility: visible;
+            }
+            .btm2{
+                visibility: visible;
+            }
+        }
+        @media screen and (max-width: 720px) {
+            .p1,.p2,.p3{
+                visibility: hidden;
+                width: 0px;
+                height: 0px;
+            }
+            
+        }
+        @media screen and (min-width: 720px){
+            .p1,.p2,.p3{
+                visibility: visible;
+            }
+            .p11,.p22{
+                visibility: hidden;
+                width: 0px;
+                height: 0px;
+                padding: 0px;
+                margin: 0px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+    <img src="img/tell.png">
+    <span>400-808-8682</span> 
+    <span class="sign"><a style="color: white;">请登录 | 注册</a></span>
+    </div>
+    <div class="container">
+		<p></p>
+		<nav class="navbar navbar-inverse" > 
+			<div class="container-fluid">
+			  	<div class="navbar-header">
+			    	<button style="border-color: white;margin-top: 12px;" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-1">
+			      		<span style="background-color: black;width: 40px;height: 4px;margin-bottom: 10px;" class="icon-bar"></span>
+			      		<span style="background-color: black;width: 40px;height: 4px;margin-bottom: 10px;" class="icon-bar"></span>
+			      		<span style="background-color: black;width: 40px;height: 4px;margin-bottom: 10px;" class="icon-bar"></span>
+			    	</button>
+                    <a class="navbar-brand" href="#" style="height: 80px;"><img src="img/logo.png" alt=""></a>
+                    <button class="speed">快速定制</button>
+			  	</div>
+			  	<div class="collapse navbar-collapse" id="bs-1">
+			    	<ul class="nav navbar-nav" style="margin-left: 70px;margin-top: 25px;">
+			      		<li><a href="#">首页</a></li>
+			      		<li><a href="#">热门路线</a></li>
+			      		<li><a href="#">签证推荐</a></li>
+			      		<li><a href="#">使命愿景</a></li>    
+			    	</ul>   
+				</div>
+			</div>
+		</nav>
+	</div>
+    <div class="head-wrap">
+        <div class="p1">
+            悠游古欧洲 &nbsp; 遍览德法瑞意
+        </div>
+        <div class="p2">
+            巴黎卢浮宫、塞纳河游船，凡尔赛宫
+        </div>
+        <div class="p3">
+            少女峰、大运河游船、金色列车、西庸城堡
+        </div>
+        <div class="p11">
+            悠游古欧洲&nbsp;&nbsp;遍览德法瑞意
+        </div>
+        <div class="p22">
+            全程升级热早+1晚5星酒店
+        </div>
+        <div class="search">
+            <div class="position">
+                <img src="img/position.png">  
+                <span>目的地</span>
+            </div>
+            <div class="inp">
+                <input class="inp1" type="text" placeholder="&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;日本&nbsp;&nbsp;&nbsp;美国&nbsp;&nbsp;&nbsp;英国&nbsp;&nbsp;&nbsp;地中海">
+            </div>
+            <div class="srh">
+                <img src="img/search.png">
+            </div>
+        </div>
+        <div class="car-sent">
+            <div class="pic">
+                <div>机场接送&nbsp;&nbsp;省钱省心</div>
+                <div>提供上海、苏州、无锡各市</div>
+                <div>往返机场、码头接送服务，更有包车服务</div>
+            </div>
+            <div class="car">
+                <img src="img/car.png">
+                <span>车辆接送</span>
+                <input type="button" value="查看详情">
+            </div>
+        </div>
+        <div class="cs">
+            <img src="img/carH.png" alt="">
+            <div>
+                <span>机场接送&nbsp;&nbsp;省心省力</span>
+                <span>提供上海、苏州、无锡各市</span>
+                <span>往返机场、码头接送服务，更有包车服务</span>
+            </div>
+            <input type="button" value="查看详情">
+        </div>
+    </div>
+    <div class="tittle1">
+        <p>热门线路</p>
+        <p>Popular&nbsp; tourist&nbsp; routes</p>
+    </div>
+    <div class="tittle11">
+        <span>&nbsp;&nbsp热门线路</span>
+    </div>
+    <div class="container" style="background-color: white;">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <img id="hot1" src="img/hot1.jpg" alt="" style="width: 590px;height: 437px;padding-bottom: 10px;">
+                    <div style="background: black;width: 590px;height: 85px;position: absolute;bottom: 447px;">
+                        <span style="display: block;padding-left: 39px;padding-top: 5px;font-size: 20px;color: white;">海南三亚5天4晚，纯玩、4晚红树林度假王国</span>
+                        <span style="display: block;padding-left: 39px;padding-top: 5px;font-size: 20px;color: white;">¥<span style="font-size: 28px;">2580</span>/人起</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="img/hot2.jpg" alt="" style="width: 590px;height: 437px;">
+                    <div style="background: black;width: 590px;height: 85px;position: absolute;bottom: 0px;">
+                        <span style="display: block;padding-left: 39px;padding-top: 5px;font-size: 20px;color: white;">德法意瑞欧洲4国，ABCD任意线路由您挑选</span>
+                        <span style="display: block;padding-left: 39px;padding-top: 5px;font-size: 20px;color: white;">¥<span style="font-size: 28px;">7999</span>/人起</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="hot">
+                <div class="row">
+                    <img src="img/hot3.jpg" alt="" style="width: 611px;height: 293px;padding-left: 10px;padding-bottom: 5px;">
+                    <div style="background: rgba(0, 0, 0, 0.5);width: 601px;height: 75px;position: absolute;bottom: 590px;margin-left: 10px;">
+                        <span style="display: block;padding-left: 39px;padding-top: 5px;font-size: 20px;color: white;">曼谷+芭提雅&nbsp;国际五星，赠送2220大礼包，绝无自费</span>
+                        <span style="display: block;padding-left: 39px;padding-top: 5px;font-size: 20px;color: white;">¥<span style="font-size: 28px;">2799</span>/人起</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="img/hot4.jpg" alt="" style="width: 611px;height: 293px;padding-left: 10px;padding-bottom: 5px;">
+                    <div style="background: rgba(0, 0, 0, 0.5);width: 601px;height: 75px;position: absolute;bottom: 300px;margin-left: 10px;">
+                        <span style="display: block;padding-left: 39px;padding-top: 5px;font-size: 20px;color: white;">日本本州游&nbsp;樱花、寿司、温泉、美食</span>
+                        <span style="display: block;padding-left: 39px;padding-top: 5px;font-size: 20px;color: white;">¥<span style="font-size: 28px;">5399</span>/人起</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="img/hot5.jpg" alt="" style="width: 611px;height: 288px;padding-left: 10px;">
+                    <div style="background: rgba(0, 0, 0, 0.5);width: 601px;height: 75px;position: absolute;bottom: 0px;margin-left: 10px;">
+                        <span style="display: block;padding-left: 39px;padding-top: 5px;font-size: 20px;color: white;">斯里兰卡7天6晚全景游&nbsp;保证入住两晚香格里拉</span>
+                        <span style="display: block;padding-left: 39px;padding-top: 5px;font-size: 20px;color: white;">¥<span style="font-size: 28px;">7999</span>/人起</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="more">查看更多></button>
+    </div>
+    <div class="tittle2">
+        <p>使命与愿景</p>
+        <p>让旅游回归本质&nbsp;&nbsp; 体验纯粹旅游</p>
+    </div>
+    <div class="tittle22">
+        <span>使命与愿景:</span>
+        <span>让旅游回归本质,体验纯粹旅游</span>
+    </div>
+    <div class="container" style="padding-left: 0;padding-right: 0;">
+        <div class="row">
+            <div class="col-xs-12 col-md-5" style="padding-right: 0px;">
+                <div style="background-image: url(img/mission1.jpg);background-repeat: no-repeat;background-size: 100% 100%;height: 352px;"></div>
+            </div>
+            <div id="intro" class="col-xs-12 col-md-7">
+                <span id="sp1">
+                    服务理念及优势
+                </span>
+                <span id="sp2">
+                    "英华逸游”通过重新打造旅游全程中的产品线路设计、出行交通方案、陪游向导服务、增值关怀项目等，
+                    为客户提供高品质的旅游体验。英华逸游在泰国、欧洲、等多个国家拥有丰富的旅游资源，
+                    同时致力于给用户提供性价比高的产品和服务。
+                </span>
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-xs-12 col-md-12">
+                <div style="background-image: url(img/mission2.jpg);background-repeat: no-repeat;background-size: 100% 100%;height: 473px;"></div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="design">
+        <ul>
+            <li style="margin-left: 140px;">
+                <img src="img/rorate.png" alt="">
+                <img class="spic" style="right: 125px;bottom: 20px;" src="img/icon1.png" alt="">
+                <span class="f1">品质行程</span>
+                <span class="f2">旅游达人精心设计、基于口碑反复打磨,</span>
+                <span class="f2">全网最好，敢跟任何产品比</span>
+            </li>
+            <li>
+                <img src="img/rorate.png" alt="">
+                <img class="spic" style="right: 120px;bottom: 20px;" src="img/icon2.png" alt="">
+                <span class="f1">品质消费</span>
+                <span class="f2">不推自费,</span>
+                <span class="f2">不进垃圾购物店和伪景点</span>
+            </li>
+            <li>
+                <img src="img/rorate.png" alt="">
+                <img class="spic" style="right: 120px;bottom: 25px;" src="img/icon3.png" alt="">
+                <span class="f1">品质小团</span>
+                <span class="f2">独立成团不散拼,</span>
+                <span class="f2">只跟亲朋好友一起玩，每天发团</span>
+            </li>
+        </ul>
+    </div>
+    <div class="design1">
+        <p>--服务优势--</p>
+        <ul style="padding-left: 0px;">
+            <li>
+                <img src="img/icon11.png" alt="">
+                <span class="f11">旅游达人精心设计、基于口碑反复打磨，</span>
+                <span class="f22">告别人山人海鸡肋景点。</span>
+                <span>全网最好，敢跟任何产品比</span>
+            </li>
+            <li>
+                <img src="img/icon22.png" alt="">
+                <span class="f11">不推自费，</span>
+                <span class="f22">不进垃圾购物店和伪景点</span>
+            </li>
+            <li>
+                <img src="img/icon33.png" alt="">
+                <span class="f11">独立成团不散拼，</span>
+                <span class="f22">只跟亲朋好友一起玩，每天发团 </span>
+            </li>
+        </ul>
+    </div>
+    <div class="btm1">
+        <div class="first">
+            <ul>
+                <li style="position: relative;bottom: 40px;font-size: 20px;text-align: left;">合作伙伴</li>
+                <li><img src="img/xiecheng.png" alt=""><span>携程网</span></li>
+                <li><img src="img/feizhu.png" alt=""><span>阿里飞猪</span></li>
+                <li><img src="img/quna.png" alt=""><span>去哪儿</span></li>
+                <li style="width: 74px;"><img src="img/suzhou.png" alt=""><span>苏州旅游局</span></li>
+            </ul>
+        </div>
+        <div class="second">
+            <span style="font-size: 20px;">热门位置</span>
+            <span style="width: 1095px;left: 135px;bottom: 27px;">
+                韩国&nbsp;&nbsp;日本&nbsp;&nbsp;菲律宾&nbsp;&nbsp;越南&nbsp;&nbsp;老挝&nbsp;&nbsp;柬埔寨&nbsp;&nbsp;    
+                泰国&nbsp;&nbsp;马来西亚&nbsp;&nbsp;新加坡&nbsp;&nbsp;印度尼西亚&nbsp;&nbsp;印度&nbsp;&nbsp; 
+                斯里兰卡&nbsp;&nbsp;土耳其&nbsp;&nbsp;阿联酋&nbsp;&nbsp;西班牙&nbsp;&nbsp;意大利&nbsp;&nbsp;    
+                希腊&nbsp;&nbsp;法国&nbsp;&nbsp;比利时
+            </span>
+            <span style="width: 1095px;left: 135px;bottom: 27px;">
+                荷兰&nbsp;&nbsp;英国&nbsp;&nbsp;瑞士&nbsp;&nbsp;奥地利&nbsp;&nbsp; 
+                德国&nbsp;&nbsp;匈牙利&nbsp;&nbsp;俄罗斯&nbsp;&nbsp;捷克&nbsp;&nbsp;
+                芬兰&nbsp;&nbsp;葡萄牙&nbsp;&nbsp;冰岛&nbsp;&nbsp;美国&nbsp;&nbsp;加拿大&nbsp;&nbsp;
+                巴西&nbsp;&nbsp;阿根廷&nbsp;&nbsp;澳大利亚&nbsp;&nbsp;新西兰&nbsp;&nbsp;
+            </span>
+        </div>
+        <div class="third">
+            <span style="font-size: 20px;">主题服务</span>
+            <span style="width: 1095px;left: 135px;bottom: 25px;">
+                海岛度假&nbsp;&nbsp;历史文化&nbsp;&nbsp;探索冒险&nbsp;&nbsp;美食购物&nbsp;&nbsp;
+                都市生活&nbsp;&nbsp;海外游学&nbsp;&nbsp;邮轮度假&nbsp;&nbsp;蜜月摄影&nbsp;&nbsp;亲子乐园
+            </span>
+        </div>
+        <div class="fourth">
+            <span style="font-size: 20px;">友情链接</span>
+            <span style="width: 1095px;left: 135px;bottom: 25px;">
+                马蜂窝&nbsp;&nbsp;穷游&nbsp;&nbsp;booking&nbsp;&nbsp;苏州旅游局&nbsp;&nbsp;
+                驴友网&nbsp;&nbsp;吾爱全球签证中心&nbsp;&nbsp;酒店团购&nbsp;&nbsp;携程旅游攻略&nbsp;&nbsp;
+                天巡职航在线&nbsp;&nbsp;满天飞旅游网&nbsp;&nbsp;中国旅游网&nbsp;&nbsp;澳乐网&nbsp;&nbsp;背包兔旅游行程
+            </span>
+            <span style="width: 1095px;left: 135px;bottom: 27px;">
+                出境旅游&nbsp;&nbsp;国际酒店&nbsp;&nbsp;广州旅行社&nbsp;&nbsp;出境旅游&nbsp;&nbsp;
+                517旅行&nbsp;&nbsp;花生游&nbsp;&nbsp;家园网&nbsp;&nbsp;海外婚礼
+            </span>
+        </div>
+    </div>
+    <div class="btm2">
+        <span>2020&nbsp;&nbsp;@苏州英华国际旅游有限公司&nbsp;版权所有</span>
+    </div>
+    <div class="btm3">
+        <span>苏ICP备号、2020</span></br>
+        <span>@苏州英华国际旅游有限公司 版权所有</span></br>
+        <span>技术支持  杭州科技</span>
+    </div>
+</body>
+</html>
